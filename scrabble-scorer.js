@@ -32,9 +32,12 @@ function oldScrabbleScorer(word) {
 
 // your job is to finish writing these functions and variables that we've named //
 // don't change the names or your program won't work as expected. //
-const gameWord = input.question("Let's play some scrabble! Enter a word:")
+//const gameWord = input.question("Let's play some scrabble! Enter a word:")
 
 function initialPrompt() {
+   let gameWord = input.question("Please enter a word");
+
+   return gameWord
 
    
 };
@@ -141,7 +144,7 @@ let newPointStructure = transform(oldPointStructure)
 
 
 function runProgram() {
-   initialPrompt(gameWord);
+   let gameWord = initialPrompt();
    let scoreAlg = scorerPrompt();
    console.log("scoring function result: ",scoreAlg.scorerFunction(gameWord));
    
